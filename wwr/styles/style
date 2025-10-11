@@ -1,0 +1,139 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@300;600&family=Inria+Serif:wght@300;700&display=swap');
+
+/* --- Color and Font Variables --- */
+:root {
+  --primary-color: #614d81;
+  --secondary-color: #e6d197;
+  --accent1-color: #a09dd6;
+  --accent2-color: #ffffff;
+
+  --heading-font: 'Arima', serif;
+  --paragraph-font: 'Inria Serif', serif;
+
+  --headline-color-on-white: #614d81;
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: #614d81;
+  --paragraph-color-on-color: white;
+  --nav-link-color: #614d81;
+  --nav-background-color: #e6d197;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #614d81;
+}
+
+/* --- Main Page Container --- */
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* --- Base Styles --- */
+body {
+  font-family: var(--paragraph-font);
+  background-color: var(--accent2-color);
+  color: var(--paragraph-color-on-white);
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Header --- */
+header {
+  background-color: rgba(97, 77, 129, 0.8);
+  text-align: center;
+  padding: 1em;
+}
+
+/* --- Navigation --- */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav-background-color);
+}
+nav a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  padding: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+nav a:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+}
+
+/* --- Hero Section --- */
+#hero-img {
+  width: 100%;
+}
+#hero-msg h1, #hero-msg h4 {
+  text-align: center;
+  color: var(--headline-color-on-white);
+}
+.button-box {
+  text-align: center;
+}
+
+/* --- Buttons --- */
+.book, .join {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+.book:hover, .join:hover {
+  background-color: var(--secondary-color);
+  color: var(--accent1-color);
+}
+
+/* --- Cards and Icons --- */
+.icon {
+  width: 80px;
+}
+.logo {
+  width: 80px;
+}
+
+/* --- Message Section and Background --- */
+#background {
+  height: 725px;
+  background-color: var(--accent1-color);
+}
+.msg {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 2em;
+}
+.msg h2 {
+  color: var(--primary-color);
+}
+.msg p {
+  color: var(--headline-color-on-white);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  text-align: center;
+  padding: 1em 0;
+}
+footer p {
+  font-size: 1.2em;
+}
+footer a {
+  color: var(--accent2-color);
+  text-decoration: none;
+  padding: 0.5em;
+}
+footer a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* --- Centering --- */
+main section {
+  text-align: center;
+}
