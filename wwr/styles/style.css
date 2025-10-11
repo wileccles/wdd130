@@ -3,21 +3,22 @@
 
 /* --- Color and Font Variables --- */
 :root {
-  --primary-color: #614d81;
-  --secondary-color: #e6d197;
-  --accent1-color: #a09dd6;
-  --accent2-color: #ffffff;
+  --primary-color: #614d81;        
+  --secondary-color: #180022;      
+  --accent1-color: #a09dd6;        
+  --accent2-color: #ffffff;        
 
   --heading-font: 'Arima', serif;
   --paragraph-font: 'Inria Serif', serif;
 
   --headline-color-on-white: #614d81;
-  --headline-color-on-color: white;
+  --headline-color-on-color: #ffffff;
   --paragraph-color-on-white: #614d81;
-  --paragraph-color-on-color: white;
+  --paragraph-color-on-color: #ffffff;
+
   --nav-link-color: #614d81;
-  --nav-background-color: #e6d197;
-  --nav-hover-link-color: white;
+  --nav-background-color: #180022;
+  --nav-hover-link-color: #ffffff;
   --nav-hover-background-color: #614d81;
 }
 
@@ -38,9 +39,13 @@ body {
 
 /* --- Header --- */
 header {
-  background-color: rgba(97, 77, 129, 0.8);
+  background-color: var(--primary-color); 
   text-align: center;
-  padding: 1em;
+  padding: 2em 0;
+  color: var(--headline-color-on-color);
+}
+header h1, header h2, header h3, header h4, header p {
+  color: var(--headline-color-on-color);
 }
 
 /* --- Navigation --- */
@@ -76,7 +81,7 @@ nav a:hover {
 /* --- Buttons --- */
 .book, .join {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--accent2-color);
   text-decoration: none;
   padding: 0.75em 1.5em;
   border-radius: 5px;
@@ -95,8 +100,11 @@ nav a:hover {
 .logo {
   width: 80px;
 }
+.rivers-card h2, .camping-card h2, .rapids-card h2 {
+  color: var(--primary-color);
+}
 
-/* --- Message Section and Background --- */
+/* --- Main Section Background and Message --- */
 #background {
   height: 725px;
   background-color: var(--accent1-color);
@@ -110,7 +118,7 @@ nav a:hover {
   color: var(--primary-color);
 }
 .msg p {
-  color: var(--headline-color-on-white);
+  color: var(--headline-color-on-color);
 }
 
 /* --- Footer --- */
@@ -118,10 +126,11 @@ footer {
   background-color: var(--primary-color);
   color: var(--accent2-color);
   text-align: center;
-  padding: 1em 0;
+  padding: 2em 0;
 }
 footer p {
   font-size: 1.2em;
+  color: var(--accent2-color);
 }
 footer a {
   color: var(--accent2-color);
@@ -136,4 +145,17 @@ footer a:hover {
 /* --- Centering --- */
 main section {
   text-align: center;
+}
+
+/* --- Responsive Tweak (optional) --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  nav a {
+    padding: 0.5em;
+  }
+  #background {
+    height: 300px;
+  }
 }
