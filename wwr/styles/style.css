@@ -3,13 +3,13 @@
 
 /* --- Color and Font Variables --- */
 :root {
-  --primary-color: #614d81;        
-  --secondary-color: #180022;      
-  --accent1-color: #a09dd6;        
-  --accent2-color: #ffffff;        
+  --primary-color: #614d81;
+  --secondary-color: #180022;
+  --accent1-color: #a09dd6;
+  --accent2-color: #ffffff;
 
-  --heading-font: 'Arima', serif;
-  --paragraph-font: 'Inria Serif', serif;
+  --heading-font: 'Arima', 'Arial Rounded MT Bold', cursive;
+  --paragraph-font: 'Inria Serif', Georgia, serif;
 
   --headline-color-on-white: #614d81;
   --headline-color-on-color: #ffffff;
@@ -22,45 +22,57 @@
   --nav-hover-background-color: #614d81;
 }
 
-/* --- Main Page Container --- */
-#content {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-/* --- Base Styles --- */
+/* --- Reset Defaults --- */
 body {
   font-family: var(--paragraph-font);
+  font-size: 22px;
   background-color: var(--accent2-color);
   color: var(--paragraph-color-on-white);
   margin: 0;
   padding: 0;
 }
 
+h2 {
+  margin: 0;
+}
+
+/* --- Main Page Container --- */
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 /* --- Header --- */
 header {
-  background-color: var(--primary-color); 
+  background-color: var(--primary-color);
   text-align: center;
   padding: 2em 0;
   color: var(--headline-color-on-color);
 }
+
 header h1, header h2, header h3, header h4, header p {
   color: var(--headline-color-on-color);
 }
 
 /* --- Navigation --- */
+#logo_link {
+  padding-top: 5px;
+}
+
 nav {
   display: flex;
   justify-content: center;
   background-color: var(--nav-background-color);
 }
+
 nav a {
   text-decoration: none;
   color: var(--nav-link-color);
-  padding: 1em;
+  padding: 35px;
   font-weight: bold;
   text-align: center;
 }
+
 nav a:hover {
   background-color: var(--nav-hover-background-color);
   color: var(--nav-hover-link-color);
@@ -70,10 +82,18 @@ nav a:hover {
 #hero-img {
   width: 100%;
 }
+
 #hero-msg h1, #hero-msg h4 {
   text-align: center;
   color: var(--headline-color-on-white);
 }
+
+.home-title {
+  font-family: var(--heading-font);
+  font-size: 2em;
+  margin-top: 10px;
+}
+
 .button-box {
   text-align: center;
 }
@@ -83,11 +103,14 @@ nav a:hover {
   background-color: var(--primary-color);
   color: var(--accent2-color);
   text-decoration: none;
-  padding: 0.75em 1.5em;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
   border-radius: 5px;
   display: inline-block;
-  margin-top: 0.5em;
 }
+
+/* Hover states */
 .book:hover, .join:hover {
   background-color: var(--secondary-color);
   color: var(--accent1-color);
@@ -96,10 +119,25 @@ nav a:hover {
 /* --- Cards and Icons --- */
 .icon {
   width: 80px;
+  padding-top: 10px;
 }
+
 .logo {
   width: 80px;
 }
+
+.card-img {
+  border: 10px solid var(--primary-color);
+}
+
+main section img {
+  box-sizing: border-box;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+  margin: 200px 0;
+}
+
 .rivers-card h2, .camping-card h2, .rapids-card h2 {
   color: var(--primary-color);
 }
@@ -109,16 +147,23 @@ nav a:hover {
   height: 725px;
   background-color: var(--accent1-color);
 }
+
 .msg {
   background-color: var(--secondary-color);
   text-align: center;
-  padding: 2em;
+  padding: 35px;
+  line-height: 1.5em;
 }
+
 .msg h2 {
   color: var(--primary-color);
+  font-family: var(--heading-font);
 }
+
 .msg p {
   color: var(--headline-color-on-color);
+  padding-bottom: 15px;
+  font-size: 0.8em;
 }
 
 /* --- Footer --- */
@@ -126,36 +171,26 @@ footer {
   background-color: var(--primary-color);
   color: var(--accent2-color);
   text-align: center;
-  padding: 2em 0;
+  padding: 25px 50px;
+  margin-top: 200px;
 }
+
 footer p {
   font-size: 1.2em;
   color: var(--accent2-color);
 }
+
 footer a {
   color: var(--accent2-color);
   text-decoration: none;
   padding: 0.5em;
 }
+
 footer a:hover {
   color: var(--secondary-color);
   text-decoration: underline;
 }
 
-/* --- Centering --- */
-main section {
-  text-align: center;
-}
-
-/* --- Responsive Tweak (optional) --- */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-  nav a {
-    padding: 0.5em;
-  }
-  #background {
-    height: 300px;
-  }
+footer .social img {
+  padding-top: 15px;
 }
