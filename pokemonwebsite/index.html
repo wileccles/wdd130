@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokémon Legends: Z-A Fan Guide</title>
+  <style>
+    :root{
+      --max-width:1100px;
+      --gutter:24px;
+      --muted:#181c22;
+      --border:#EEF0F3;
+      --accent:s#111;
+      --bg:linear-gradient(180deg,#2F2B30,#4C5E6C);
+      --content-bg:linear-gradient(180deg,#2F2B30,#4C5E6C);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#EEF0F3;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .page{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:16px;
+    }
+
+    header.site-header{
+      margin-top:10px;
+      border:1px solid var(--border);
+      padding:18px;
+      display:flex;
+      align-items:center;
+      gap:18px;
+      background:linear-gradient(180deg,#2F2B30,#4C5E6C);
+    }
+
+    .brand-left{
+      width:84px;
+      height:84px;
+      background:#eee;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:6px;
+      flex-shrink:0;
+      overflow:hidden;
+    }
+    .brand-left img{max-width:100%;height:auto;display:block}
+
+    h1.title{
+      font-size:32px;
+      font-weight:700;
+      margin:0;
+      font-style:italic;
+      text-align:center;
+      flex:1;
+      letter-spacing:0.2px;
+    }
+
+    main{
+      margin-top:18px;
+      padding:14px 0;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      background:var(--content-bg);
+    }
+
+    .block{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:24px;
+      align-items:start;
+      padding:34px 0;
+      border-bottom:1px dotted rgba(0,0,0,0.04);
+    }
+
+    .block:last-of-type{border-bottom:0}
+
+    .lead-text{
+      font-size:15px;
+      color:#EEF0F3;
+      max-width:720px;
+      text-align:left;
+    }
+
+    .card{
+      background:#EEF0F3;
+      padding:20px;
+      border-radius:4px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:stretch;
+      justify-content:flex-start;
+    }
+
+    .card a.image-link{
+      display:block;
+      background:#181c22;
+      height:180px;
+      border-radius:8px;
+      overflow:hidden;
+      text-decoration:none;
+      border:1px solid rgba(0,0,0,0.04);
+    }
+    .card a.image-link img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .caption{
+      font-size:14px;
+      color:var(--muted);
+      margin-top:8px;
+    }
+
+    footer.site-footer{
+      margin-top:14px;
+      padding:18px 8px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    @media (max-width:880px){
+      .block{grid-template-columns:1fr; gap:18px}
+      .card a.image-link{height:220px}
+      h1.title{font-size:26px;text-align:left}
+      .brand-left{width:64px;height:54px}
+    }
+
+    @media (max-width:480px){
+      .page{padding:10px}
+      .lead-text{font-size:14px}
+      .caption{font-size:13px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="site-header" role="banner">
+      <div class="brand-left" aria-hidden="true">
+        <img src="/pokemonwebsite/images/logo.png" alt="">
+      </div>
+      <h1 class="title">Pokémon Legends: Z-A Fan Guide</h1>
+    </header>
+
+    <main role="main" aria-label="Main content">
+      <section class="block" aria-labelledby="section1-head">
+        <div>
+          <p id="section1-head" class="lead-text">
+            Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu. Modus argumentum ne qui tation efficiendi in eos. Ei mea falli legere efficiantur et tollit aliquip debitis mei. No deserunt mediocritatem mel. Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus. (Will Include Actual Text Later)
+          </p>
+        </div>
+        <aside class="card" aria-label="Featured image">
+          <a class="image-link" href="#page1" title="Open page 1">
+            <img src="/pokemonwebsite/images/z-a-cover.jpg" alt="Placeholder for feature image">
+          </a>
+          <div class="caption">Starters Info</div>
+        </aside>
+      </section>
+
+      <section class="block" aria-labelledby="section2-head">
+        <div>
+          <p id="section2-head" class="lead-text">
+            Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu. Modus argumentum ne qui tation efficiendi in eos. Ei mea falli legere efficiantur et tollit aliquip debitis mei. No deserunt mediocritatem mel. Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus. (Will Include Actual Text Later)
+          </p>
+        </div>
+        <aside class="card" aria-label="Featured image 2">
+          <a class="image-link" href="#page2" title="Open page 2">
+            <img src="/pokemonwebsite/images/lumiose-city.jpg" alt="Placeholder for feature image 2">
+          </a>
+          <div class="caption">Tips and Tricks</div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      Pokémon Legends: Z-A Fan Guide - William Eccles
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.image-link').forEach((a, idx) => {
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = a.getAttribute('href').substring(1);
+        alert('Would navigate to: ' + target + '. Replace href with your real page URL or perform JS routing.');
+      });
+    });
+  </script>
+</body>
+</html>

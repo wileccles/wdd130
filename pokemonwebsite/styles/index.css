@@ -1,0 +1,9 @@
+header.site-header {
+  display: flex;
+  justify-content: center;  /* center the title horizontally */
+  align-items: center;      /* center vertically */
+  padding: 18px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg,#fff,#fcfcfc);
+  gap: 0;                   /* remove leftover gap from flex */
+}
