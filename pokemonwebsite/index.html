@@ -1,204 +1,220 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pokémon Legends: Z-A Fan Guide</title>
+
   <style>
-    :root{
-      --max-width:1100px;
-      --gutter:24px;
-      --muted:#181c22;
-      --border:#EEF0F3;
-      --accent:s#111;
-      --bg:linear-gradient(180deg,#2F2B30,#4C5E6C);
-      --content-bg:linear-gradient(180deg,#2F2B30,#4C5E6C);
+    :root {
+      --max-width: 1100px;
+      --gutter: 24px;
+      --muted-color: #181c22;
+      --border-color: #EEF0F3;
+      --accent-color: #111;
+      --bg-gradient: linear-gradient(180deg,#2F2B30,#4C5E6C);
+      --content-gradient: linear-gradient(180deg,#2F2B30,#4C5E6C);
       font-family: "Helvetica Neue", Arial, sans-serif;
     }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:#EEF0F3;
-      line-height:1.45;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg-gradient);
+      color: #EEF0F3;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    .page{
-      max-width:var(--max-width);
-      margin:0 auto;
-      padding:16px;
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 16px;
     }
 
-    header.site-header{
-      margin-top:10px;
-      border:1px solid var(--border);
-      padding:18px;
-      display:flex;
-      align-items:center;
-      gap:18px;
-      background:linear-gradient(180deg,#2F2B30,#4C5E6C);
+    header.header {
+      margin-top: 12px;
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg-gradient);
     }
 
-    .brand-left{
-      width:84px;
-      height:84px;
-      background:#eee;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:6px;
-      flex-shrink:0;
-      overflow:hidden;
-    }
-    .brand-left img{max-width:100%;height:auto;display:block}
-
-    h1.title{
-      font-size:32px;
-      font-weight:700;
-      margin:0;
-      font-style:italic;
-      text-align:center;
-      flex:1;
-      letter-spacing:0.2px;
+    .logo-box {
+      width: 80px;
+      height: 80px;
+      background: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
-    main{
-      margin-top:18px;
-      padding:14px 0;
-      border-top:1px solid var(--border);
-      border-bottom:1px solid var(--border);
-      background:var(--content-bg);
+    .logo-box img {
+      max-width: 100%;
+      display: block;
+      height: auto;
     }
 
-    .block{
-      display:grid;
-      grid-template-columns: 1fr 360px;
-      gap:24px;
-      align-items:start;
-      padding:34px 0;
-      border-bottom:1px dotted rgba(0,0,0,0.04);
+    h1.site-title {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0;
+      font-style: italic;
+      flex: 1;
+      text-align: center;
     }
 
-    .block:last-of-type{border-bottom:0}
-
-    .lead-text{
-      font-size:15px;
-      color:#EEF0F3;
-      max-width:720px;
-      text-align:left;
+    main {
+      margin-top: 20px;
+      padding: 12px 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      background: var(--content-gradient);
     }
 
-    .card{
-      background:#EEF0F3;
-      padding:20px;
-      border-radius:4px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      align-items:stretch;
-      justify-content:flex-start;
+    .section-block {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: var(--gutter);
+      padding: 30px 0;
     }
 
-    .card a.image-link{
-      display:block;
-      background:#181c22;
-      height:180px;
-      border-radius:8px;
-      overflow:hidden;
-      text-decoration:none;
-      border:1px solid rgba(0,0,0,0.04);
-    }
-    .card a.image-link img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
+    .intro-text {
+      font-size: 15px;
+      max-width: 720px;
     }
 
-    .caption{
-      font-size:14px;
-      color:var(--muted);
-      margin-top:8px;
+    .info-card {
+      background: #EEF0F3;
+      padding: 18px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
-    footer.site-footer{
-      margin-top:14px;
-      padding:18px 8px;
-      border-top:1px solid var(--border);
-      color:var(--muted);
-      font-size:15px;
+    .info-card a.img-link {
+      display: block;
+      background: #181c22;
+      height: 180px;
+      border-radius: 6px;
+      overflow: hidden;
+      text-decoration: none;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    @media (max-width:880px){
-      .block{grid-template-columns:1fr; gap:18px}
-      .card a.image-link{height:220px}
-      h1.title{font-size:26px;text-align:left}
-      .brand-left{width:64px;height:54px}
+    .info-card a.img-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease;
     }
 
-    @media (max-width:480px){
-      .page{padding:10px}
-      .lead-text{font-size:14px}
-      .caption{font-size:13px}
+    .info-card a.img-link:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
+
+    .info-card a.img-link:hover img {
+      transform: scale(1.04);
+    }
+
+    .caption {
+      font-size: 14px;
+      color: var(--muted-color);
+      margin-top: 6px;
+    }
+
+    footer.footer {
+      margin-top: 18px;
+      padding: 16px 6px;
+      border-top: 1px solid var(--border-color);
+      font-size: 15px;
+      color: var(--muted-color);
+    }
+
+    footer.footer a {
+      color: #999;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 880px) {
+      .section-block { grid-template-columns: 1fr; }
+      .info-card a.img-link { height: 210px; }
+      h1.site-title { font-size: 26px; text-align: left; }
+      .logo-box { width: 60px; height: 50px; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 10px; }
+      .intro-text { font-size: 14px; }
+      .caption { font-size: 13px; }
+    }
+
   </style>
 </head>
-<body>
-  <div class="page">
 
-    <header class="site-header" role="banner">
-      <div class="brand-left" aria-hidden="true">
-        <img src="images/logo.png" alt="">
+<body>
+  <div class="container">
+
+    <header class="header">
+      <div class="logo-box">
+        <img src="images/logo.png" alt="Site Logo">
       </div>
-      <h1 class="title">Pokémon Legends: Z-A Fan Guide</h1>
+      <h1 class="site-title">Pokémon Legends: Z-A Fan Guide</h1>
     </header>
 
-    <main role="main" aria-label="Main content">
-      <section class="block" aria-labelledby="section1-head">
+    <main>
+      <section class="section-block">
         <div>
-          <p id="section1-head" class="lead-text">
-Choosing your starter Pokémon is one of the most important decisions you’ll make at the beginning of your journey in Pokémon Legends: Z-A. Your starter will be your main partner early on, shaping how you approach battles and your strategy as you learn the game’s mechanics. Each starter Pokémon offers different strengths and weaknesses, as well as playstyles, making the choice more meaningful than just appearance alone. Understanding how your starter fits your preferred way of playing can give you a strong foundation for the challenges ahead.
+          <p class="intro-text">
+            Choosing your starter Pokémon is one of the most important decisions you’ll make at the beginning of your journey in Pokémon Legends: Z-A. Your starter will be your main partner early on, shaping how you approach battles and your strategy as you learn the game’s mechanics. Each starter Pokémon offers different strengths and weaknesses, as well as playstyles, making the choice more meaningful than just appearance alone. Understanding how your starter fits your preferred way of playing can give you a strong foundation for the challenges ahead.
           </p>
         </div>
-        <aside class="card" aria-label="Featured image">
-          <a class="image-link" href="starters.html" title="Open page 1">
-            <img src="images/z-a-cover.jpg" alt="Placeholder for Starter Image">
+
+        <aside class="info-card">
+          <a class="img-link" href="starters.html">
+            <img src="images/z-a-cover.jpg" alt="Starter Pokémon Info">
           </a>
           <div class="caption">Starters Info</div>
         </aside>
       </section>
 
-      <section class="block" aria-labelledby="section2-head">
+      <section class="section-block">
         <div>
-          <p id="section2-head" class="lead-text">
-This Tips and Tricks page is designed to help players get the most out of their experience in Pokémon Legends: Z-A. Whether you’re new to the game or looking to refine your strategy, these tips cover helpful mechanics, and ways to progress more efficiently. From battle advice to exploration strategies, this page offers useful guidance to make your journey smoother, more enjoyable, and more successful.
+          <p class="intro-text">
+            This Tips and Tricks page is designed to help players get the most out of their experience in Pokémon Legends: Z-A. Whether you’re new to the game or looking to refine your strategy, these tips cover helpful mechanics, and ways to progress more efficiently. From battle advice to exploration strategies, this page offers useful guidance to make your journey smoother, more enjoyable, and more successful.
           </p>
         </div>
-        <aside class="card" aria-label="Featured image 2">
-          <a class="image-link" href="tips.html" title="Open page 2">
-            <img src="images/lumiose-city.jpg" alt="Placeholder for Tips and Tricks">
+
+        <aside class="info-card">
+          <a class="img-link" href="tips.html">
+            <img src="images/lumiose-city.jpg" alt="Tips and Tricks">
           </a>
-          <div class="caption">Tips and Tricks</div>
+          <div class="caption">Tips & Tricks</div>
         </aside>
       </section>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-      Pokémon Legends: Z-A Fan Guide - William Eccles
+    <footer class="footer">
+      <p>Pokémon Legends: Z-A Fan Guide – William Eccles</p>
+      <p style="font-size:13px; margin-top:6px;">
+        <a href="https://www.flaticon.com/free-icons/pokemon" title="pokemon icons">
+          Pokémon icons by Vitaly Gorbachev - Flaticon
+        </a><br>
+        Image credit: The Pokémon Company
+      </p>
     </footer>
-  </div>
 
-  <script>
-    document.querySelectorAll('.image-link').forEach((a, idx) => {
-      a.addEventListener('click', function(e){
-        e.preventDefault();
-        const target = a.getAttribute('href').substring(1);
-        alert('Would navigate to: ' + target + '. Replace href with your real page URL or perform JS routing.');
-      });
-    });
-  </script>
+  </div>
 </body>
 </html>
